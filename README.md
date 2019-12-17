@@ -63,3 +63,36 @@ Only one level is implemented.
 
 
 Copyright by smeerws
+
+# FRAGEN:
+## Was ist Refactoring Definition in eigenen Worten?
+
+Refactoring heißt es den Code aufzuräumen und übersichtlicher zu machen.
+
+
+## Welche Vorteile/Nachteile birgt Refactoring?
+
+Wenn man nach einer langen Zeit mal wieder über den Code schauen muss, kann ein nicht gerefactored Code
+sehr verwirrend sein. Es kann jedoch auch sehr viel Zeit in anspruch nehmen.
+
+## Was sind die Refactoring-Schritte?
+
+Schauen ob alles funktioniert
+Erster Schritt Code zu verbessern (zb. Magic Strings entfernen)
+Testen ob Programm noch funktioniert
+Committen
+Nächster Schritt
+
+## Prinzipien von guten Code?
+
+KISS - Keep it simple stupid, Code sollte so simpel wie möglich sein 
+DRY – Don’t Repeat Yourself, nicht unnötig dinge wiederholen
+YAGNI – You Aren’t Gonna Need It, Dinge die nicht wirklich notwendig sind sollten entfernt werden
+SoC – Separation of Concerns, Code sollte in Abschnitte unterteilt weden
+
+
+## Was versteht man unter Code Smell?
+
+Code der unnötig lange und umständlich geschrieben ist. Code Smells können oft fehleranfällig sein.
+
+## Recherche von 10 Code Smells die Eure Projekt betreffen können, inkl. Beschreibung und Beispiel.
