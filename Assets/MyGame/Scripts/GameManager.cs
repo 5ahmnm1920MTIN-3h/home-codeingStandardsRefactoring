@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     string defaultText;
     int score = 0;
+    const string mainSceneKeyword = "MainScene";
+    const string menuSceneKeyword = "MenuScene";
+
 
     private void Awake()
     {
@@ -51,12 +54,12 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("mainSceneKeyword");
     }
 
     public void Menu()
     {
-        SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene("mainSceneKeyword");
     }
 
     public void IncrementScore()
