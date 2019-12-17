@@ -7,12 +7,15 @@ public class TextureScroll : MonoBehaviour
 
     Material backgroundMaterial;
 
+
+    // Called once on gamestart, sets backgroundmaterial
     private void Awake()
     {
         backgroundMaterial = GetComponent<Renderer>().material;
 
     }
 
+    // Called every fixed framerate frame, scrolls the background
     private void FixedUpdate()
     {
         if (scrollBackground)
