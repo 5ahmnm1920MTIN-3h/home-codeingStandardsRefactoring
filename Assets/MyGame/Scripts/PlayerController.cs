@@ -30,13 +30,13 @@ public class PlayerController : MonoBehaviour
         {
             if (isGrounded == true)
             {
-                jump();
+                Jump();
             }
         }
     }
 
     // Called when isGrounded is true, starts jumpevent
-    void jump()
+    void Jump()
     {
         isGrounded = false;
         rigidbodySanta.velocity = Vector2.up * jumpForce;
