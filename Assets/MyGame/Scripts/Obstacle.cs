@@ -27,7 +27,7 @@ void Start()
         Destroy(gameObject);
 }
         //if obstacle's position x is > 15f it will be destroyed
-        if (transform.position.x > obstacleDestroyBoundary)
+        else (transform.position.x > obstacleDestroyBoundary)
         {
             Destroy(gameObject);
         }
