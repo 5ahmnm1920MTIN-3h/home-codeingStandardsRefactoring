@@ -4,22 +4,22 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-
     public static GameManager instance;
     public GameObject gameOverPanel;
     public Text scoreText;
-    string defaultText;
-    int score = 0;
+    private int score = 0;
     const string mainSceneKeyword = "MainScene";
     const string menuSceneKeyword = "MenuScene";
 
+    // Called once on Gamestart, sets instance variable
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
     }
+
     // Called on GameOver, calls StopScrolling, stops obstacle spawning and activates gameover panel
     public void GameOver()
     {
@@ -29,28 +29,28 @@ public class GameManager : MonoBehaviour
     }
 
     // Called if GameOver is true, stops background scrolling
-    void StopScrolling()
+    private void StopScrolling()
     {
         TextureScroll[] scrollingObjects = FindObjectsOfType<TextureScroll>();
 
-        foreach(TextureScroll item in scrollingObjects)
+        foreach (TextureScroll item in scrollingObjects)
         {
-            item.scrolBackground = false;
-            Debug.Log(item.name);
+            item.scrollBackground = false;
         }
     }
 
     // Called on Restart, sets MainScene
     public void Restart()
     {
-        SceneManager.LoadScene("mainSceneKeyword");
+        SceneManager.LoadScene(mainSceneKeyword);
     }
 
     // Called on Menu, sets MenuScene
     public void Menu()
     {
-        SceneManager.LoadScene("mainSceneKeyword");
+        SceneManager.LoadScene(menuSceneKeyword);
     }
+
     // Counts and shows score
     public void IncrementScore()
     {
