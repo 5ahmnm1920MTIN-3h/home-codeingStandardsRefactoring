@@ -30,9 +30,7 @@ public class ObstacleSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
-
     IEnumerator Spawn()
     {
         float waitTime = 1f;
@@ -42,9 +40,8 @@ public class ObstacleSpawner : MonoBehaviour
         while (!isGameOver)
         {
             SpawnObstacle();
-            
-            waitTime = Random.Range(minSpawnTime,maxSpawnTime);
-
+        
+            waitTime = Random.Range(minSpawnTime, maxSpawnTime);
             yield return new WaitForSeconds(waitTime);
         }
     }
@@ -52,7 +49,6 @@ public class ObstacleSpawner : MonoBehaviour
     void SpawnObstacle()
     {
         int randomPosition = Random.Range(0,obstacles.Length);
-
         Instantiate(obstacles[random],transform.position,Quaternion.identity);
     }
 }
